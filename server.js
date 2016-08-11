@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require("body-parser");
 var mongojs = require("mongojs");
+var mongoose = require("mongoose");
 
 //wtf does this mean? this isn't what we did in class
 var databaseUrl = "location";
@@ -15,6 +16,10 @@ var db = mongojs(databaseUrl, collections);
 db.on("error", function(err) {
 	console.log("Database error", err);
 });
+
+// var mongoose = require('mongoose');
+ 
+// mongoose.connect('mongodb://localhost/my_database');
 
 //makes static content accessible
 app.use(express.static("public"));
