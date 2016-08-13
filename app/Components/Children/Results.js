@@ -2,25 +2,28 @@ var React = require("react");
 
 var Results = React.createClass({
 
-	return(
+	render: function() {
+		return(
 
-		<div className="card-panel green lighten-4">
+			<div className="card-panel green lighten-4">
 
 				<div className="card-title">
 					<h3 className="white-text valign center">Results</h3>
 				</div>
 
-			{/* format for results list*/}
+				{/* format for results list*/}
 				<div>
-					title here align left {/*if time add details in card reveal*/} 
+					<p>title here align left </p> {/*if time add details in card reveal*/} 
 					<a className="waves-effect waves-light btn"><i class="material-icons left">input</i>save</a>
 
 				</div>
 
 
-			</div> {/*closes panel*/}
+			</div> 
+			
 
-	)
+		)
+	}
 });
 
 module.exports = Results;

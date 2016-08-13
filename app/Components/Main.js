@@ -1,10 +1,11 @@
 var React = require("react");
 
 //require children here
-var Search = require("./Components.Search");
-var Saved = require("./Components.Saved");
+var Search = require("./Children/Search");
+var Saved = require("./Children/Saved");
+var Results =require("./Children/Results");
 //helper functions 
-var helpers = require("./utils/helpers.js");
+var helpers = require("./utils/searchNYT.js");
 
 var Main = React.createClass({
 
@@ -13,6 +14,7 @@ var Main = React.createClass({
 
 		return {
 			//variables set here
+			
 		}//closes return
 	}, //closes State
 
@@ -24,21 +26,23 @@ var Main = React.createClass({
 
 			<div className="wrapper">
 				<div class="row">
-					<h1>New York Times Article Scrubber<small>All The News That's Fit to Scrape</small></h1>
+					<h1>NYT Articles<small>All The News That's Fit to Search</small></h1>
 				</div> {/*closes heading*/}
 
 				<div className="container">
-					
+
 					<Search />
 
+					{/*<Results />
+
+					<Saved />*/}
 				</div> {/*closes container*/}
 
 
-			</div> {/*closes wrapper*/}
+			</div> 
+		)
+	} 
 
-		) {/*closes return*/}
-	} {/*closes render*/}
-
-}); {/*closes Main*/}
+}); 
 
 module.exports = Main;

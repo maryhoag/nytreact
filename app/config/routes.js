@@ -9,10 +9,10 @@ var Route = Router.Route;
 var IndexRoute	= Router.IndexRoute;
 
 // Reference the high-level components
-var Main = require('../components/Main');
-var Search = require('../components/Children/Search'); 
-var Results = require('../components/Children/Results'); 
-var Saved = require('../components/Children/Saved');
+var Main = require('../Components/Main');
+var Search = require('../Components/Children/Search'); 
+var Results = require('../Components/Children/Results'); 
+var Saved = require('../Components/Children/Saved');
 {/*var GrandChild1 = require('../components/Children/Grandchildren/GrandChild1');
 var GrandChild2 = require('../components/Children/Grandchildren/GrandChild2');*/}
 

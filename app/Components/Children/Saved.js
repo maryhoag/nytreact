@@ -8,10 +8,12 @@ var Saved = React.createClass({
 	render: function() {
 
 		return(
-			{/*page content*/}
-			{/*render the content to the browser then attribute the values to whatever it is that you render… 
-			and if the user decides to save then you push that to your database} */}
-			
+			<div id="savedPanel" >
+				{/*page content
+				render the content to the browser then attribute the values to whatever it is that you render
+				and if the user decides to save then you push that to your database} */}
+				<p> hi </p>
+			</div>
 		)
 	}
 });
