@@ -8,16 +8,17 @@ var Search = React.createClass({
 	//State and functions here
 	getInitialState: function() {
 
-		return (
-		var authKey = "3b9d60ec52814ef48e9ca3a2984b739f";
+		return {
+		'authKey': "3b9d60ec52814ef48e9ca3a2984b739f",
 
 		// the results from the user's inputs
-		var queryTerm 	= "";
+		'queryTerm': "",
 		//!!!!! this should be only 5
-		var numResults 	= 0;
-		var startYear 	= 0;
-		var endYear		= 0;
-		}),
+		'numResults': 0,
+		'startYear': 0,
+		'endYear':	0
+		}
+	},
 
 	render: function(){
 

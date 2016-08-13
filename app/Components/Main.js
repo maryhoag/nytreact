@@ -9,14 +9,14 @@ var helpers = require("./utils/searchNYT.js");
 
 var Main = React.createClass({
 
+	//variables are in search
+	// getInitialState: function() {
 
-	getInitialState: function() {
+	// 	return {
+	// 		//variables set here
 
-		return {
-			//variables set here
-			
-		}//closes return
-	}, //closes State
+	// 	}//closes return
+	// }, //closes State
 
 	//functions
 

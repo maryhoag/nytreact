@@ -25376,9 +25376,9 @@
 
 	// Reference the high-level components
 	var Main = __webpack_require__(223);
-	var Search = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../Components/Children/Search\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	var Results = __webpack_require__(227);
-	var Saved = __webpack_require__(226);
+	var Search = __webpack_require__(224);
+	var Results = __webpack_require__(226);
+	var Saved = __webpack_require__(225);
 	{} /*var GrandChild1 = require('../components/Children/Grandchildren/GrandChild1');
 	   var GrandChild2 = require('../components/Children/Grandchildren/GrandChild2');*/
 
@@ -25404,26 +25404,24 @@
 	var React = __webpack_require__(1);
 
 	//require children here
-	var Search = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Children/Search\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
-	var Saved = __webpack_require__(226);
-	var Results = __webpack_require__(227);
+	var Search = __webpack_require__(224);
+	var Saved = __webpack_require__(225);
+	var Results = __webpack_require__(226);
 	//helper functions 
-	var helpers = __webpack_require__(225);
+	var helpers = __webpack_require__(227);
 
 	var Main = React.createClass({
 		displayName: "Main",
 
 
-		getInitialState: function getInitialState() {
+		//variables are in search
+		// getInitialState: function() {
 
-			return {}
-			//variables set here
+		// 	return {
+		// 		//variables set here
 
-			//closes return
-			;
-		},
-
-		//closes State
+		// 	}//closes return
+		// }, //closes State
 
 		//functions
 		render: function render() {
@@ -25460,8 +25458,204 @@
 	module.exports = Main;
 
 /***/ },
-/* 224 */,
+/* 224 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	//other dependencies
+	var helpers = __webpack_require__(227);
+
+	var Search = React.createClass({
+		displayName: "Search",
+
+
+		//State and functions here
+		getInitialState: function getInitialState() {
+
+			return {
+				'authKey': "3b9d60ec52814ef48e9ca3a2984b739f",
+
+				// the results from the user's inputs
+				'queryTerm': "",
+				//!!!!! this should be only 5
+				'numResults': 0,
+				'startYear': 0,
+				'endYear': 0
+			};
+		},
+
+		render: function render() {
+
+			return (
+				//code on the page here
+
+
+				React.createElement(
+					"div",
+					{ className: "card-panel" },
+					React.createElement(
+						"div",
+						{ className: "card-title" },
+						React.createElement(
+							"h3",
+							{ className: "valign center" },
+							"Search"
+						)
+					),
+					React.createElement(
+						"form",
+						{ className: "col s10" },
+						React.createElement(
+							"div",
+							{ className: "row" },
+							React.createElement(
+								"div",
+								{ className: "input-field" },
+								React.createElement("input", { placeholder: "search term", id: "searchTerm", type: "text", "class": "validate" }),
+								React.createElement(
+									"label",
+									{ "for": "searchTerm" },
+									"search term"
+								)
+							)
+						),
+						React.createElement(
+							"div",
+							{ className: "row" },
+							React.createElement(
+								"div",
+								{ className: "col s6" },
+								React.createElement(
+									"div",
+									{ className: "input-field" },
+									React.createElement("input", { placeholder: "start year", id: "startYear", type: "text", "class": "validate" }),
+									React.createElement(
+										"label",
+										{ "for": "startYear" },
+										"start year"
+									)
+								)
+							),
+							React.createElement(
+								"div",
+								{ className: "col s6" },
+								React.createElement(
+									"div",
+									{ className: "input-field" },
+									React.createElement("input", { placeholder: "end year", id: "end year", type: "text", "class": "validate" }),
+									React.createElement(
+										"label",
+										{ "for": "end year" },
+										"end year"
+									)
+								)
+							),
+							React.createElement(
+								"button",
+								{ id: "runSearch", "class": "btn waves-effect waves-light", type: "submit", name: "action" },
+								"search",
+								React.createElement(
+									"i",
+									{ "class": "material-icons right" },
+									"send"
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = Search;
+
+/***/ },
 /* 225 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	//other dependencies?
+
+	var Saved = React.createClass({
+		displayName: "Saved",
+
+
+		//stuff
+		render: function render() {
+
+			return React.createElement(
+				"div",
+				{ id: "savedPanel" },
+				React.createElement(
+					"p",
+					null,
+					" hi "
+				)
+			);
+		}
+	});
+
+	module.exports = Saved;
+
+/***/ },
+/* 226 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(1);
+
+	var Results = React.createClass({
+		displayName: "Results",
+
+
+		render: function render() {
+			return React.createElement(
+				"div",
+				{ className: "card-panel green lighten-4" },
+				React.createElement(
+					"div",
+					{ className: "card-title" },
+					React.createElement(
+						"h3",
+						{ className: "white-text valign center" },
+						"Results"
+					)
+				),
+				React.createElement(
+					"div",
+					null,
+					React.createElement(
+						"p",
+						null,
+						"title here align left "
+					),
+					" ",
+					React.createElement(
+						"a",
+						{ className: "waves-effect waves-light btn" },
+						React.createElement(
+							"i",
+							{ "class": "material-icons left" },
+							"input"
+						),
+						"save"
+					)
+				)
+			);
+		}
+	});
+
+	module.exports = Results;
+
+/***/ },
+/* 227 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25601,88 +25795,6 @@
 		articleCounter = 0;
 		$("#wellSection").empty();
 	});
-
-/***/ },
-/* 226 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	//other dependencies?
-
-	var Saved = React.createClass({
-		displayName: "Saved",
-
-
-		//stuff
-		render: function render() {
-
-			return React.createElement(
-				"div",
-				{ id: "savedPanel" },
-				React.createElement(
-					"p",
-					null,
-					" hi "
-				)
-			);
-		}
-	});
-
-	module.exports = Saved;
-
-/***/ },
-/* 227 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(1);
-
-	var Results = React.createClass({
-		displayName: "Results",
-
-
-		render: function render() {
-			return React.createElement(
-				"div",
-				{ className: "card-panel green lighten-4" },
-				React.createElement(
-					"div",
-					{ className: "card-title" },
-					React.createElement(
-						"h3",
-						{ className: "white-text valign center" },
-						"Results"
-					)
-				),
-				React.createElement(
-					"div",
-					null,
-					React.createElement(
-						"p",
-						null,
-						"title here align left "
-					),
-					" ",
-					React.createElement(
-						"a",
-						{ className: "waves-effect waves-light btn" },
-						React.createElement(
-							"i",
-							{ "class": "material-icons left" },
-							"input"
-						),
-						"save"
-					)
-				)
-			);
-		}
-	});
-
-	module.exports = Results;
 
 /***/ }
 /******/ ]);
